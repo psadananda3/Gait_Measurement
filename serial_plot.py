@@ -47,7 +47,7 @@ def main():
 	analogPlot=[]
 
  
-	strPort = '/dev/cu.usbmodem1421'
+	strPort = '/dev/cu.usbmodem1411'
 	#strPort = sys.argv[1];
 
 	# plot parameters
