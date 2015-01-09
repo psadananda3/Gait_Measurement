@@ -1,21 +1,15 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-#with open("sensorpot.txt") as f:
- #   data = f.read()
-
-#data = data.split('\n')
 data=np.loadtxt("sensor.txt")
 
 sonic1=data[:,0]
 prox1=data[:,1]
 pir1=data[:,2]
 
-sonic2=data[:,4]
-prox2=data[:,5]
-pir2=data[:,6]
-#print data
-
+sonic2=data[:,3]
+prox2=data[:,4]
+pir2=data[:,5]
 
 fig = plt.figure()
 
@@ -44,17 +38,17 @@ plotsensor(ax1,pir1)
 
 #ULTRASONIC2
 ax1 = fig.add_subplot(324)
-ax1.set_title("Ultrasonic1")  
+ax1.set_title("Ultrasonic2")  
 plotsensor(ax1,sonic2)  
 
 #PROXIMITY1
 ax1 = fig.add_subplot(325)
-ax1.set_title("proximity1")    
+ax1.set_title("proximity2")    
 plotsensor(ax1,prox2)  
 
 #PIR1
 ax1 = fig.add_subplot(326)
-ax1.set_title("PIR1")    
+ax1.set_title("PIR2")    
 plotsensor(ax1,pir2)   
 plt.show()
 
